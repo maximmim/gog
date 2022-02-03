@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+
+
+<html>
+     <head>
+      <link rel="apple-touch-icon" sizes="57x57" href="ico/apple-icon-57x57.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="ico/apple-icon-60x60.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="ico/apple-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="ico/apple-icon-76x76.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="ico/apple-icon-114x114.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="ico/apple-icon-120x120.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="ico/apple-icon-144x144.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="ico/apple-icon-152x152.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="ico/apple-icon-180x180.png">
+      <link rel="icon" type="image/png" sizes="192x192"href="ico/android-icon-192x192.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="ico/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="ico/favicon-96x96.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="ico/favicon-16x16.png">
+      <link rel="manifest" href="/manifest.json">
+      <meta name="msapplication-TileColor" content="#ffffff">
+      <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+      <meta name="theme-color" content="#ffffff">
+      <meta name="google-signin-scope" content="profile email">
+      <meta name="google-signin-client_id" content="1004990868192-p0gaqm0srr50e96vjs794vlkntiqk546.apps.googleusercontent.com">
+      <script src="https://apis.google.com/js/platform.js" async defer></script>
+  </head>
+   
+   
+   </head>
+
+   <body>
+      <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+      <script>
+        function onSignIn(googleUser) {
+          // Useful data for your client-side scripts:
+          let profile = googleUser.getBasicProfile();
+          console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+          console.log('Full Name: ' + profile.getName());
+          console.log('Given Name: ' + profile.getGivenName());
+          console.log('Family Name: ' + profile.getFamilyName());
+          console.log("Image URL: " + profile.getImageUrl());
+          console.log("Email: " + profile.getEmail());
+  
+          // The ID token you need to pass to your backend:
+          var id_token = googleUser.getAuthResponse().id_token;
+          console.log("ID Token: " + id_token);
+        }
+        
+      </script>
+    </body>
+<meta charset="UTF-8"/>
+<style>
+   
+
+   #gog {
+      border-radius: 105px;
+      display: none;
+      top: 500px;
+      left: 750px;
+      position: absolute;
+      padding: 10px; /* Поля вокруг текста */
+      border-radius: 25px;
+    background: rgb(156, 183, 255); /* Цвет фона */
+   }
+   #logo {
+      border-radius: 105px;
+      display: none;
+      top: 406px;
+      left: 750px;
+      position: absolute;
+      padding: 10px; /* Поля вокруг текста */
+      border-radius: 25px;
+    background: rgb(156, 183, 255); /* Цвет фона */
+   }
+  #goddot{
+      top:380px;    
+      left: 812px;;
+      position: absolute;
+      display: none;
+      border-radius: 25px;
+    background: rgb(156, 183, 255); /* Цвет фона */
+    padding: 10px; /* Поля вокруг текста */
+    }
+    #if {
+      border-radius: 105px;
+      display: none;
+      top: 500px;
+      left: 750px;
+      position: absolute;
+      padding: 10px; /* Поля вокруг текста */
+      border-radius: 25px;
+    background: rgb(156, 183, 255); /* Цвет фона */
+    }
+#acaunt {
+   border-radius: 15px;
+   position: absolute;
+   top: 100px;
+   left: 1820px;;
+   width: 40px;
+}
+#m {
+   display: none;
+}
+
+#osbat {
+   position: absolute;
+   left: 300px;
+}
+#ed {
+   position: absolute; 
+   left:85%;
+   top: -3px;
+   width: 70px;
+}
+#end {
+   position: absolute; 
+   left:85%;
+   top: -3px;
+   width: 70px;
+}
+#endd {
+   position: absolute; 
+   left:85%;
+   top: -5px;
+   width: 70px;
+}
+#enddd {
+   position: absolute; 
+   left:85%;
+   top: -5px;
+   width: 70px;
+}
+#endddd {
+   position: absolute; 
+   left:95%;
+   top: 510px;
+   width: 70px;
+   display: none;
+}
+.foe {
+   display: none;
+}
+#mpm {
+   position: absolute; 
+   display: none;
+   top: 500px;
+   left: 700px;
+   padding: 10px; /* Поля вокруг текста */
+      border-radius: 25px;
+    background: rgb(156, 183, 255); /* Цвет фона */
+}
+#det {
+ 
+   border-radius: 105px;
+      display: none;
+      top: 500px;
+      left: 750px;
+      position: absolute;
+      padding: 10px; /* Поля вокруг текста */
+      border-radius: 25px;
+    background: rgb(156, 183, 255); /* Цвет фона */
+}
+#deta {
+   border-radius: 105px;
+      display: none;
+      top: 500px;
+      left: 750px;
+      position: absolute;
+      padding: 10px; /* Поля вокруг текста */
+      border-radius: 25px;
+    background: rgb(156, 183, 255); /* Цвет фона */
+}
+#io {
+   border-radius: 105px;
+      top: 500px;
+      left: 750px;
+      display: none;
+      position: absolute;
+      padding: 10px; /* Поля вокруг текста */
+      border-radius: 25px;
+    background: rgb(156, 183, 255); /* Цвет фона */
+    width: 400px;
+    height: 300px;
+}
+#iou {
+
+      position: absolute;
+      border-radius: 25px;
+    width: 400px;
+
+}
+</style>
+
+
+
+<div id="mom">
+
+
+<head> 
+   
+   <div id="logo">     
+   
+   <p>Установите Логин:<input type="text" id="log"></p>
+   <p>Установите Пароль:<input type="text" id="logi"></p>
+   <button onclick="conti();">Зарегистриривать Акаунт</button>
+   <img src="end.png" onclick="ojo()" id="endd">
+</div>
+      <div id="goddot">
+      <p>Логин: <input type="text" id="login"></p>
+      <p>пароль: <input type="text" id="password"></p>
+      <button onclick="conti();">зрегистриривать акаунт</button>
+      <button onclick='noni();' id="gogdot">Login</button>
+      <img src="end.png" onclick="ojo()" id="end">
+   </div>
+
+    <h1 id="det">
+      Дякую за цю оцінку
+   </h1>
+   <h1 id="deta">
+Дякую за цю оцінку + ушол создатель грусий 
+   </h1>
+   <img src="end.png" onclick="ojo()" id="endddd">
+<div id="if">
+   <h1> 
+Вам сподоболся сайт ?
+   </h1>
+
+   <Button onclick="bob()">Да</Button>
+   <Button onclick="boba()" >Нет</Button>
+   <img src="end.png" onclick="ojo()" id="endddd">
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+
+<script>
+
+
+
+
+
+function bob() {
+    document.getElementById("det").style.display = 'block'
+    document.getElementById("if").style.display = 'none'
+    document.getElementById("endddd").style.display = 'block'
+}
+function boba() {
+    document.getElementById("deta").style.display = 'block'
+    document.getElementById("if").style.display = 'none'
+    document.getElementById("endddd").style.display = 'block'
+}
+let bod = 0
+
+let doc = document.cookie
+
+//if (bod  == -5) {
+//   alert("Ви забанени за попитки взлома")
+//   document.location.replace('ban.html')
+//}
+function noni() {
+var login = document.getElementById('login').value;      
+var password = document.getElementById('password').value;   
+
+   if (login === doc[0] && password === doc[1]) {  
+         alert('Welcome ' + doc[0]);
+     document.getElementById("goddot").style.display = "none";
+     
+   }
+
+    
+}
+function non() {
+      document.getElementById("logo").style.display = "none"; 
+      document.getElementById("goddot").style.display = "block";
+
+}
+function ojo() {
+   document.getElementById("goddot").style.display = "none"
+   document.getElementById("logo").style.display = "none"
+   document.getElementById("if").style.display = "none"
+   document.getElementById("io").style.display = "none"
+   document.getElementById("det").style.display = "none"
+   document.getElementById("deta").style.display = "none"
+}
+function reg() {
+    document.getElementById("logo").display = "block" 
+    document.getElementById("gog").display = "none" 
+
+
+}   
+
+</script>
+
+</head>
+   <body>
+ <button id="lpl"onclick="non()">
+    Акаунт
+ </button>
+
+<script> 
+   function conti() {
+      document.getElementById("goddot").style.display = "none"
+      document.getElementById("logo").style.display = "block" 
+
+doc = [document.getElementById("log").value ,document.getElementById("logi").value]
+
+
+
+   }
+</script>
+
+
+   <div id="mom">
+
+<style>
+   #lpl {
+  
+      position: absolute;
+      top: 100px;
+      
+      background-color: rgb(181, 207, 255);
+   }
+   #lpll {
+     display: none;
+      position: absolute;
+      top: 550px;
+      left: -400px;
+      background-color: rgb(181, 207, 255);
+   }
+</style>
+   
+
+   <head>
+ 
+
+
+
+
+
+
+<style>
+
+
+
+</style>
+
+
+
+
+
+<haed>
+
+<!--css стили страници-->
+
+
+
+<style>
+
+
+#oro {
+
+   position: absolute;
+
+
+top:43px;
+
+left:170px;
+
+
+
+}
+
+
+
+
+
+
+
+
+.iooi2 {
+
+position: absolute;
+top:18% ;
+background:rgb(181, 207, 255);
+display: none;
+
+}
+
+.ioi {
+
+position: absolute;
+top: 100px;;
+
+left:94%;
+
+}
+
+   body {
+      margin: 0;
+   }
+   
+   
+   
+   
+   
+   .foto {
+     
+   margin: 20%
+   
+   }
+   
+   
+   .qooq {
+   
+   font-size:20px;
+   padding: 30px;
+   }
+   
+   .qoooq
+   { 
+
+    justify-content: space-around;
+    align-content: space-around;
+     position: relative;
+     height: 60px;
+     display: grid;
+   
+     transition:all 300ms ease 0;
+  
+    font-size:43px;
+   
+   color:rgb(161, 194, 255)
+   
+   }
+   
+   
+   .qoooq:before
+   {
+      content:'';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left:50%;
+      right:50%;
+      height:3px;
+     background:rgb(0, 140, 255);
+     transition: all .5s;
+     width: 0;
+   }
+   
+   .qoooq:hover:before
+   {
+     background:rgb(255, 0, 0);
+     left:0;
+     right:0;
+     width: 100%;
+   }
+   
+   .eerr {
+      position: absolute; /* Абсолютное позиционирование */
+       bottom: 40px; /* Положение от нижнего края */
+       right:70px;; /* Положение от правого края */
+   line-height:2px;
+   
+   }
+   
+   
+   
+   .uuoouu {
+      position: absolute; /* Абсолютное позиционирование */
+       bottom: 15px; /* Положение от нижнего края */
+       left: 15; /* Положение от левого края */
+       line-height: 1px;
+   color:blue
+   font-size
+   }
+   
+   
+   
+   
+   .gogo {
+   
+     position: absolute; /* Абсолютное позиционирование */
+       bottom: 15px; /* Положение от нижнего края */
+       left: 15; /* Положение от левого края */
+       line-height: 1px;
+   
+   }
+   
+   
+   
+
+   
+   
+   </style>
+
+<title>
+   mix store
+</title>
+<!--конец css-->
+
+
+<img onclick="document.location.replace('home2.html');" class='eerr' src="strelka.png" width="100" height="50">
+
+
+<script src="script.js"></script>
+
+
+</haed>
+
+
+<haed> 
+
+
+
+<meta charset="UTF-8"/> 
+
+<!--кнопка home-->
+
+<div onclick="document.location.replace('home.html');" class="qoooq">HOME</div>
+
+</haed>
+<body> <style>
+#foflo {
+display: none;   
+}
+
+#fof {
+   display: none;   
+}
+
+
+
+#fof2 {
+   display: none;   
+}
+
+
+#fof3 {
+   display: none;   
+}
+
+
+
+
+#fof5 {
+   display: none;   
+}
+
+#fofloo {
+display: none;   
+
+}
+
+#foff {
+   display: none;   
+   
+}
+
+
+
+#fof22 {
+   display: none;   
+   
+}
+
+
+#fof33 {
+   display: none;  
+  
+}
+
+
+
+
+#fof55 {
+   display: none;  
+  
+}
+
+
+
+#fofl {
+    
+   color: white;
+}
+
+
+
+#fofl2 {
+      
+   color: white;
+}
+
+
+#fofl3 {
+     
+   color: white;
+}
+
+
+
+
+#fofl5 {
+  
+   color: white;
+}
+
+
+</style>
+<script>
+
+
+function fip() {
+
+   let fooof = confirm('тобі сподобався сайт ?')
+
+
+if  (fooof)  {
+    alert('дякую за оцінку ')
+}
+else {
+    alert('дякую за оцінку + создатель грусий ушол')
+}
+
+}
+
+
+
+function hohq() {
+
+document.getElementById("foflo").style.display = "block";
+
+}
+
+function hoh() {
+
+   document.getElementById("fofloo").style.display = "block";
+
+}
+function hoh11() {
+   document.getElementById("fof").style.display = "block";
+}
+function hoh22() {
+   document.getElementById("fof2").style.display = "block";
+}
+function hoh33() {
+   document.getElementById("fof3").style.display = "block";
+}
+
+function hoh55() {
+   document.getElementById("fof5").style.display = "block";
+}
+
+function hoh1() {
+   document.getElementById("foff").style.display = "block";
+}
+function hoh2() {
+   document.getElementById("fof22").style.display = "block";
+}
+function hoh3() {
+   document.getElementById("fof33").style.display = "block";
+}
+
+function hoh5() {
+   document.getElementById("fof55").style.display = "block";
+}
+
+</script>
+
+
+
+
+
+
+<button onclick="jojo22()"class='iooi2'>transition to English</button>
+
+
+<!-- огурец -->
+<figure id="wo2">
+</body>
+
+
+
+<head>
+
+
+   <p><img  src="b897615s-1920.png" onclick="hohq()" width="120" height="120" alt="Скульптура"></p>
+  
+      <figcaption>огірок 20грн</figcaption>
+ <div id='foflo'> 
+
+
+
+
+	
+
+ <button onclick="alert('це турецький огірок АХТУНГ ')"> <img src="strelka2.png" alt="Зонтик" width="30" height="30"
+          style="vertical-align: middle"> Опис</button>
+
+
+<button onclick="alert('за несено в корзину ')"> <img src="images.jpg" alt="Зонтик" width="20" height="20"
+          style="vertical-align: middle">купити</button>
+
+</div>
+</figure>
+
+</head>
+<!-- биг-мак-->
+
+
+<Head>
+
+
+<figure id="wo3">
+   <p><img onclick="hoh11()" src="vovo.png" width="120" height="120" alt="Скульптура"></p>
+   <figcaption>биг мак 1 штука 25 грн</figcaption>
+<div id='fof'>
+
+
+
+
+
+
+
+
+
+	
+
+ <button onclick="alert('це бургер з 2 котлетами ')"> <img src="strelka2.png" alt="Зонтик" width="30" height="30"
+          style="vertical-align: middle"> Опис</button>
+
+<button onclick="alert('за несено в корзину ')"> <img src="images.jpg" alt="Зонтик" width="20" height="20"
+          style="vertical-align: middle">купити</button>
+         </div>
+</figure>
+</head>
+<!--помидор-->
+</body>
+
+<head>
+<figure id="wo4">
+
+   <p><img src="fofo.png" onclick="hoh22()" width="120" height="120" alt="Скульптура"></p>
+  <figcaption>томат 20 грн</figcaption>
+
+ <div id="fof2">
+
+ <button onclick="alert('це томат')"> <img src="strelka2.png" alt="Зонтик" width="30" height="30"
+          style="vertical-align: middle"> Опис</button>
+
+<button onclick="alert('за несено в корзину ')"> <img src="images.jpg" alt="Зонтик" width="20" height="20"
+          style="vertical-align: middle">купити</button>
+
+</div>
+         </figure>
+
+
+
+
+
+
+
+	
+<head>
+
+ <!--айфон 12 про ультро пупер супер-->
+
+
+<figure id="wo5">
+   <p><img src="aoao.png" onclick="hoh33()" width="120" height="120" alt="Скульптура"></p>
+  <figcaption>iphone 12 pro 80000 грн</figcaption>
+
+ <div id="fof3">
+
+
+
+
+
+	
+
+ <button onclick="alert('120gb')"> <img src="strelka2.png" alt="Зонтик" width="30" height="30"
+          style="vertical-align: middle"> Опис</button>
+
+
+<button onclick="alert('за несено в корзину ')"> <img src="images.jpg" alt="Зонтик" width="20" height="20"
+          style="vertical-align: middle">купити</button>
+
+</div>
+</figure>
+
+  
+</head>
+
+
+
+
+
+
+<style>
+
+
+
+
+
+
+   #wo1 {
+      position:absolute;
+      top: 100px;
+      left: 100px;
+ }
+   #wo2 {
+      position: absolute;
+      top: 160px;
+      left: 500px;
+
+   }
+   #wo3 {
+      position: absolute;
+      top: 160px;
+      left: 700px;
+
+   }
+   #wo4
+   {  position: absolute;
+      top: 160px;
+      left: 900px;
+
+   }
+   #wo5 {
+      position: absolute;
+      top: 160px;
+      left: 1100px;
+    
+   }
+   #wo6 {
+      position: absolute;
+      top: 160px;
+      left: 1300px;
+    
+   }
+</style>
+
+
+<head>
+
+
+
+
+
+
+   <figure id="wo6">
+      <p><img onclick="hoh55()" src="144249716.jpg" width="120" height="120" alt="Скульптура"></p>
+      <figcaption>Macbook pro 13 air</figcaption>
+   <div id="fof5">
+   
+   
+   
+   
+   
+   
+   
+   
+   
+      
+   
+    <button onclick="alert('Macbook air 13 на M1')"> <img src="strelka2.png" alt="Зонтик" width="30" height="30"
+             style="vertical-align: middle"> Опис</button>
+   
+   <button onclick="alert('за несено в корзину ')"> <img src="images.jpg" alt="Зонтик" width="20" height="20"
+             style="vertical-align: middle">купити</button>
+   </div>
+</figure>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+<head>
+
+
+
+
+
+
+</head>
+
+
+</div>
+
+
+
+
+
+
+
+
+</html>
+
+
+
+
+
